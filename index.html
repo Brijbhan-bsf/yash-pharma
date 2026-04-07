@@ -191,43 +191,96 @@
 
         <!-- Main Content -->
         <main class="flex-1 overflow-y-auto pb-20">
-            <!-- Banner Carousel -->
+            <!-- Banner Carousel - Modern Attractive -->
             <div class="px-4 py-4">
-                <div class="relative rounded-2xl overflow-hidden h-40 md:h-52">
-                    <div id="banner-carousel" class="flex transition-transform duration-500">
-                        <div class="w-full flex-shrink-0 bg-gradient-to-r from-primary-600 to-primary-700 flex items-center px-6">
-                            <div class="text-white flex-1">
-                                <p class="text-primary-200 text-sm mb-1">🔥 Limited Time</p>
-                                <h2 class="text-xl md:text-2xl font-bold mb-2">Get 20% OFF</h2>
-                                <p class="text-primary-100 text-sm mb-3">On all Ayurvedic Medicines</p>
-                                <button class="bg-white text-primary-600 px-4 py-2 rounded-full text-sm font-semibold">Shop Now</button>
+                <div class="relative rounded-2xl overflow-hidden h-48 md:h-56 shadow-xl">
+                    <div id="banner-carousel" class="flex transition-transform duration-700 ease-out">
+                        <!-- Slide 1 - Ayurvedic -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1617870950175-86b3e4faa7ad?w=800&h=400&fit=crop" alt="Ayurvedic Medicines" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-600/40"></div>
+                            <div class="absolute inset-0 flex items-center px-6 md:px-10">
+                                <div class="text-white">
+                                    <span class="bg-green-500 px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">🌿 NATURAL</span>
+                                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Get 25% OFF</h2>
+                                    <p class="text-green-100 text-sm md:text-base mb-3">On Ayurvedic Medicines & Supplements</p>
+                                    <p class="text-green-200 text-xs mb-4">100% Natural • No Side Effects</p>
+                                    <button class="bg-white text-green-700 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg hover:bg-green-50 transition-colors">Shop Now →</button>
+                                </div>
                             </div>
-                            <div class="hidden md:block text-8xl opacity-20">🌿</div>
                         </div>
-                        <div class="w-full flex-shrink-0 bg-gradient-to-r from-secondary-600 to-secondary-700 flex items-center px-6">
-                            <div class="text-white flex-1">
-                                <p class="text-secondary-200 text-sm mb-1">👨‍⚕️ Expert Doctors</p>
-                                <h2 class="text-xl md:text-2xl font-bold mb-2">Free Consultation</h2>
-                                <p class="text-secondary-100 text-sm mb-3">Book appointment now</p>
-                                <button onclick="showScreen('doctors-screen')" class="bg-white text-secondary-600 px-4 py-2 rounded-full text-sm font-semibold">Consult Now</button>
+                        <!-- Slide 2 - Free Delivery -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&h=400&fit=crop" alt="Free Delivery" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/40"></div>
+                            <div class="absolute inset-0 flex items-center px-6 md:px-10">
+                                <div class="text-white">
+                                    <span class="bg-blue-500 px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">🚚 FREE SHIPPING</span>
+                                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Free Delivery</h2>
+                                    <p class="text-blue-100 text-sm md:text-base mb-3">On Orders Above ₹299</p>
+                                    <p class="text-blue-200 text-xs mb-4">Same Day Delivery in Mumbai</p>
+                                    <button class="bg-white text-blue-700 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg hover:bg-blue-50 transition-colors">Order Now →</button>
+                                </div>
                             </div>
-                            <div class="hidden md:block text-8xl opacity-20">👨‍⚕️</div>
                         </div>
-                        <div class="w-full flex-shrink-0 bg-gradient-to-r from-amber-500 to-amber-600 flex items-center px-6">
-                            <div class="text-white flex-1">
-                                <p class="text-amber-200 text-sm mb-1">🚚 Free Delivery</p>
-                                <h2 class="text-xl md:text-2xl font-bold mb-2">On Orders ₹499+</h2>
-                                <p class="text-amber-100 text-sm mb-3">Same day delivery</p>
-                                <button class="bg-white text-amber-600 px-4 py-2 rounded-full text-sm font-semibold">Order Now</button>
+                        <!-- Slide 3 - Doctor Consultation -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=400&fit=crop" alt="Doctor Consultation" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-teal-600/40"></div>
+                            <div class="absolute inset-0 flex items-center px-6 md:px-10">
+                                <div class="text-white">
+                                    <span class="bg-teal-500 px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">👨‍⚕️ EXPERT DOCTORS</span>
+                                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Free Consultation</h2>
+                                    <p class="text-teal-100 text-sm md:text-base mb-3">Book Video Call with Specialists</p>
+                                    <p class="text-teal-200 text-xs mb-4">Top Cardiologists, Dermatologists & More</p>
+                                    <button onclick="showScreen('doctors-screen')" class="bg-white text-teal-700 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg hover:bg-teal-50 transition-colors">Consult Now →</button>
+                                </div>
                             </div>
-                            <div class="hidden md:block text-8xl opacity-20">💊</div>
+                        </div>
+                        <!-- Slide 4 - Health Checkup -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=400&fit=crop" alt="Lab Tests" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-purple-600/40"></div>
+                            <div class="absolute inset-0 flex items-center px-6 md:px-10">
+                                <div class="text-white">
+                                    <span class="bg-purple-500 px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">🧪 LAB TESTS</span>
+                                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Full Body Checkup</h2>
+                                    <p class="text-purple-100 text-sm md:text-base mb-3">Starting at Just ₹499</p>
+                                    <p class="text-purple-200 text-xs mb-4">NABL Certified Labs • Home Collection</p>
+                                    <button onclick="showScreen('lab-tests-screen')" class="bg-white text-purple-700 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg hover:bg-purple-50 transition-colors">Book Test →</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 5 - Diabetes Care -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1579172198743-2f9cce7d6a0f?w=800&h=400&fit=crop" alt="Diabetes Care" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-orange-900/90 to-orange-600/40"></div>
+                            <div class="absolute inset-0 flex items-center px-6 md:px-10">
+                                <div class="text-white">
+                                    <span class="bg-orange-500 px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">💉 DIABETES CARE</span>
+                                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Sugar Free Medicines</h2>
+                                    <p class="text-orange-100 text-sm md:text-base mb-3">Metformin, Glucomannan & More</p>
+                                    <p class="text-orange-200 text-xs mb-4">Up to 30% OFF on Diabetes Range</p>
+                                    <button class="bg-white text-orange-700 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg hover:bg-orange-50 transition-colors">Shop Now →</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- Dot Indicators -->
                     <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2">
-                        <div class="w-2 h-2 bg-white rounded-full banner-dot" data-index="0"></div>
-                        <div class="w-2 h-2 bg-white/50 rounded-full banner-dot" data-index="1"></div>
-                        <div class="w-2 h-2 bg-white/50 rounded-full banner-dot" data-index="2"></div>
+                        <button class="banner-dot w-6 h-1.5 bg-white rounded-full transition-all duration-300" data-index="0"></button>
+                        <button class="banner-dot w-1.5 h-1.5 bg-white/50 rounded-full transition-all duration-300" data-index="1"></button>
+                        <button class="banner-dot w-1.5 h-1.5 bg-white/50 rounded-full transition-all duration-300" data-index="2"></button>
+                        <button class="banner-dot w-1.5 h-1.5 bg-white/50 rounded-full transition-all duration-300" data-index="3"></button>
+                        <button class="banner-dot w-1.5 h-1.5 bg-white/50 rounded-full transition-all duration-300" data-index="4"></button>
                     </div>
+                    <!-- Arrow Buttons -->
+                    <button onclick="prevBanner()" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors">
+                        <svg class="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button onclick="nextBanner()" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors">
+                        <svg class="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
                 </div>
             </div>
 
@@ -1362,46 +1415,63 @@
 
         <main class="flex-1 overflow-y-auto pb-6 px-4">
             <div class="grid grid-cols-2 gap-4 mt-4">
-                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                <div onclick="showCategoryProducts('OTC')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer hover:scale-105 transition-transform">
                     <div class="w-16 h-16 bg-blue-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">💊</div>
                     <h3 class="font-semibold">OTC Medicines</h3>
-                    <p class="text-xs text-slate-500 mt-1">150+ Products</p>
+                    <p class="text-xs text-slate-500 mt-1" id="otc-count">Loading...</p>
                 </div>
-                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                <div onclick="showCategoryProducts('Prescription')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer hover:scale-105 transition-transform">
                     <div class="w-16 h-16 bg-red-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🩺</div>
                     <h3 class="font-semibold">Prescription</h3>
-                    <p class="text-xs text-slate-500 mt-1">200+ Products</p>
+                    <p class="text-xs text-slate-500 mt-1" id="rx-count">Loading...</p>
                 </div>
-                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                <div onclick="showCategoryProducts('Ayurvedic')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer hover:scale-105 transition-transform">
                     <div class="w-16 h-16 bg-green-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🌿</div>
                     <h3 class="font-semibold">Ayurvedic</h3>
-                    <p class="text-xs text-slate-500 mt-1">80+ Products</p>
+                    <p class="text-xs text-slate-500 mt-1" id="ayur-count">Loading...</p>
                 </div>
-                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                <div onclick="showCategoryProducts('Personal Care')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer hover:scale-105 transition-transform">
                     <div class="w-16 h-16 bg-purple-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🧴</div>
                     <h3 class="font-semibold">Personal Care</h3>
-                    <p class="text-xs text-slate-500 mt-1">120+ Products</p>
+                    <p class="text-xs text-slate-500 mt-1" id="personal-count">Loading...</p>
                 </div>
-                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                <div onclick="showCategoryProducts('Health Devices')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer hover:scale-105 transition-transform">
                     <div class="w-16 h-16 bg-orange-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">❤️</div>
                     <h3 class="font-semibold">Health Devices</h3>
-                    <p class="text-xs text-slate-500 mt-1">45+ Products</p>
+                    <p class="text-xs text-slate-500 mt-1" id="devices-count">Loading...</p>
                 </div>
-                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                <div onclick="showCategoryProducts('Nutrition')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer hover:scale-105 transition-transform">
                     <div class="w-16 h-16 bg-yellow-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🥤</div>
                     <h3 class="font-semibold">Nutrition</h3>
-                    <p class="text-xs text-slate-500 mt-1">60+ Products</p>
+                    <p class="text-xs text-slate-500 mt-1" id="nutrition-count">Loading...</p>
                 </div>
-                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                <div onclick="showCategoryProducts('Baby Care')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer hover:scale-105 transition-transform">
                     <div class="w-16 h-16 bg-pink-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">👶</div>
                     <h3 class="font-semibold">Baby Care</h3>
-                    <p class="text-xs text-slate-500 mt-1">35+ Products</p>
+                    <p class="text-xs text-slate-500 mt-1" id="baby-count">Loading...</p>
                 </div>
-                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                <div onclick="showCategoryProducts('Dental Care')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer hover:scale-105 transition-transform">
                     <div class="w-16 h-16 bg-teal-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🦷</div>
                     <h3 class="font-semibold">Dental Care</h3>
-                    <p class="text-xs text-slate-500 mt-1">25+ Products</p>
+                    <p class="text-xs text-slate-500 mt-1" id="dental-count">Loading...</p>
                 </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ==================== CATEGORY PRODUCTS SCREEN ==================== -->
+    <div id="category-products-screen" class="screen h-screen">
+        <header class="notch-safe bg-white border-b border-slate-100 px-4 pb-3 pt-2 flex items-center">
+            <button onclick="showScreen('categories-screen')" class="w-10 h-10 flex items-center justify-center">
+                <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <h1 class="text-lg font-bold flex-1 text-center pr-10" id="category-title">Products</h1>
+        </header>
+
+        <main class="flex-1 overflow-y-auto pb-6 px-4">
+            <p class="text-sm text-slate-500 mb-4" id="category-subtitle">Showing all products</p>
+            <div id="category-products-list" class="space-y-3">
+                <!-- Products will be loaded here -->
             </div>
         </main>
     </div>
@@ -1441,26 +1511,199 @@
     <script>
         // ==================== DATA ====================
         const medicines = [
+            // OTC MEDICINES
             { id: 'dolo650', name: 'Dolo 650mg', company: 'Micro Labs', price: 35, mrp: 40, pack: 'Strip of 15', category: 'OTC', rating: 4.5, reviews: 234, uses: 'Fever, Headache, Pain', requiresRx: false, badge: 'Bestseller' },
-            { id: 'shelcal500', name: 'Shelcal 500mg', company: 'Mankind Pharma', price: 145, mrp: 165, pack: 'Strip of 15', category: 'OTC', rating: 4.2, reviews: 156, uses: 'Calcium supplement, Bone health', requiresRx: false, badge: 'Popular' },
             { id: 'crocinAdvance', name: 'Crocin Advance', company: 'GSK Pharma', price: 45, mrp: 55, pack: 'Strip of 20', category: 'OTC', rating: 4.7, reviews: 312, uses: 'Fever, Pain, Headache', requiresRx: false, badge: 'Bestseller' },
-            { id: 'azithromycin', name: 'Azithromycin 500mg', company: 'Cipla', price: 98, mrp: 120, pack: 'Strip of 3', category: 'Prescription', rating: 4.1, reviews: 89, uses: 'Bacterial infections', requiresRx: true, badge: 'Rx' },
-            { id: 'panD', name: 'Pan D Capsule', company: 'Alkem', price: 125, mrp: 150, pack: 'Strip of 10', category: 'OTC', rating: 4.3, reviews: 178, uses: 'Acidity, Gastric issues', requiresRx: false, badge: null },
-            { id: 'metformin500', name: 'Metformin 500mg', company: 'Sun Pharma', price: 72, mrp: 85, pack: 'Strip of 10', category: 'Prescription', rating: 4.4, reviews: 245, uses: 'Diabetes', requiresRx: true, badge: null },
-            { id: 'amlo5', name: 'Amlodipine 5mg', company: 'Lupin', price: 85, mrp: 100, pack: 'Strip of 14', category: 'Prescription', rating: 4.2, reviews: 198, uses: 'Blood pressure', requiresRx: true, badge: null },
-            { id: 'rabeprazole20', name: 'Rabeprazole 20mg', company: 'Dr. Reddy\'s', price: 95, mrp: 120, pack: 'Strip of 10', category: 'Prescription', rating: 4.0, reviews: 134, uses: 'Acidity, GERD', requiresRx: true, badge: null },
+            { id: 'crocinPain', name: 'Crocin Pain Relief', company: 'GSK Pharma', price: 55, mrp: 65, pack: 'Strip of 10', category: 'OTC', rating: 4.4, reviews: 189, uses: 'Pain Relief, Muscle Ache', requiresRx: false, badge: null },
             { id: 'paracetamol500', name: 'Paracetamol 500mg', company: 'Generic', price: 15, mrp: 20, pack: 'Strip of 10', category: 'OTC', rating: 4.5, reviews: 567, uses: 'Fever, Pain', requiresRx: false, badge: null },
             { id: 'combiflam', name: 'Combiflam Tablet', company: 'Sanofi', price: 55, mrp: 65, pack: 'Strip of 10', category: 'OTC', rating: 4.3, reviews: 189, uses: 'Pain, Inflammation', requiresRx: false, badge: null },
-            { id: 'vit D3', name: 'Vitamin D3 60K', company: 'Torrent', price: 120, mrp: 150, pack: 'Strip of 4', category: 'OTC', rating: 4.6, reviews: 234, uses: 'Vitamin D deficiency', requiresRx: false, badge: 'Popular' },
-            { id: 'shelcalM', name: 'Shelcal M Cream', company: 'Mankind', price: 180, mrp: 220, pack: '30g Tube', category: 'Personal Care', rating: 4.1, reviews: 89, uses: 'Calcium deficiency, Osteoporosis', requiresRx: false, badge: null },
-            { id: 'betahistine', name: 'Betahistine 16mg', company: 'Cipla', price: 145, mrp: 175, pack: 'Strip of 10', category: 'Prescription', rating: 4.0, reviews: 67, uses: 'Vertigo, Tinnitus', requiresRx: true, badge: null },
-            { id: 'gabapentin', name: 'Gabapentin 300mg', company: 'Sun Pharma', price: 180, mrp: 220, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 123, uses: 'Neuropathic pain', requiresRx: true, badge: null },
-            { id: 'montelukast', name: 'Montelukast 10mg', company: 'Lupin', price: 95, mrp: 120, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 156, uses: 'Asthma, Allergy', requiresRx: true, badge: null },
-            { id: 'clindamycin', name: 'Clindamycin Gel', company: 'Galderma', price: 195, mrp: 250, pack: '20g Tube', category: 'Personal Care', rating: 4.4, reviews: 234, uses: 'Acne, Skin infections', requiresRx: false, badge: null },
+            { id: 'ibugesicPlus', name: 'Ibugesic Plus', company: 'Cipla', price: 48, mrp: 60, pack: 'Strip of 10', category: 'OTC', rating: 4.2, reviews: 145, uses: 'Fever, Pain, Headache', requiresRx: false, badge: null },
+            { id: 'maxcool', name: 'Maxcool Gel', company: 'Ajanta', price: 120, mrp: 150, pack: '30g Tube', category: 'OTC', rating: 4.1, reviews: 98, uses: 'Muscle Pain, Joint Pain', requiresRx: false, badge: null },
+            { id: 'volini', name: 'Volini Gel', company: 'Sun Pharma', price: 145, mrp: 180, pack: '50g Tube', category: 'OTC', rating: 4.5, reviews: 234, uses: 'Pain Relief, Sports Injury', requiresRx: false, badge: 'Popular' },
+            { id: 'moov', name: 'Moov Pain Relief', company: 'Hindustan Unilever', price: 135, mrp: 165, pack: '30g Tube', category: 'OTC', rating: 4.4, reviews: 312, uses: 'Backache, Sprain', requiresRx: false, badge: null },
+            { id: 'shelcal500', name: 'Shelcal 500mg', company: 'Mankind Pharma', price: 145, mrp: 165, pack: 'Strip of 15', category: 'OTC', rating: 4.2, reviews: 156, uses: 'Calcium, Bone Health', requiresRx: false, badge: 'Popular' },
+            { id: 'shelcalCT', name: 'Shelcal-CT', company: 'Mankind Pharma', price: 195, mrp: 220, pack: 'Strip of 10', category: 'OTC', rating: 4.3, reviews: 89, uses: 'Calcium + Vitamin D3', requiresRx: false, badge: null },
+            { id: 'calcirol', name: 'Calcirol Granules', company: 'Cadila', price: 165, mrp: 200, pack: 'Sachet of 1gm', category: 'OTC', rating: 4.1, reviews: 67, uses: 'Vitamin D3 Deficiency', requiresRx: false, badge: null },
+            { id: 'vitD3', name: 'Vitamin D3 60K', company: 'Torrent', price: 120, mrp: 150, pack: 'Strip of 4', category: 'OTC', rating: 4.6, reviews: 234, uses: 'Vitamin D deficiency', requiresRx: false, badge: 'Popular' },
+            { id: 'becosules', name: 'Becosules Z Capsules', company: 'Pfizer', price: 28, mrp: 35, pack: 'Strip of 20', category: 'OTC', rating: 4.6, reviews: 456, uses: 'Vitamin B-Complex, Energy', requiresRx: false, badge: 'Bestseller' },
+            { id: 'supradyn', name: 'Supradyn Daily', company: 'Bayer', price: 280, mrp: 350, pack: '30 Tablets', category: 'OTC', rating: 4.5, reviews: 456, uses: 'Multivitamin, Energy', requiresRx: false, badge: 'Popular' },
+            { id: 'revital', name: 'Revital H', company: 'Sun Pharma', price: 320, mrp: 400, pack: '30 Capsules', category: 'OTC', rating: 4.4, reviews: 378, uses: 'Multivitamin, Men\'s Health', requiresRx: false, badge: null },
+            { id: 'revitalWoman', name: 'Revital Woman', company: 'Sun Pharma', price: 320, mrp: 400, pack: '30 Capsules', category: 'OTC', rating: 4.3, reviews: 234, uses: 'Multivitamin, Women\'s Health', requiresRx: false, badge: null },
+            { id: 'centrum', name: 'Centrum Silver', company: 'Pfizer', price: 450, mrp: 550, pack: '30 Tablets', category: 'OTC', rating: 4.5, reviews: 289, uses: '50+ Multivitamin', requiresRx: false, badge: null },
+            { id: 'pharmFlexi', name: 'Pharm-Flexi MSM', company: 'Mankind', price: 380, mrp: 450, pack: '30 Tablets', category: 'OTC', rating: 4.2, reviews: 123, uses: 'Joint Health, Mobility', requiresRx: false, badge: null },
             { id: 'folicAcid', name: 'Folic Acid 5mg', company: 'Abbott', price: 35, mrp: 45, pack: 'Strip of 10', category: 'OTC', rating: 4.7, reviews: 345, uses: 'Anemia, Pregnancy', requiresRx: false, badge: null },
-            { id: 'multivitamin', name: 'Supradyn Daily', company: 'Bayer', price: 280, mrp: 350, pack: '30 Tablets', category: 'Nutrition', rating: 4.5, reviews: 456, uses: 'General health, Energy', requiresRx: false, badge: 'Popular' },
-            { id: 'omeprazole20', name: 'Omeprazole 20mg', company: 'Cipla', price: 55, mrp: 70, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 289, uses: 'Acidity, Ulcer', requiresRx: true, badge: null },
+            { id: 'ironTabs', name: 'Iron Tablets', company: 'Emcure', price: 65, mrp: 80, pack: 'Strip of 10', category: 'OTC', rating: 4.3, reviews: 198, uses: 'Iron Deficiency, Anemia', requiresRx: false, badge: null },
+            { id: 'autrin', name: 'Autrin Capsule', company: 'Cadila', price: 85, mrp: 100, pack: 'Strip of 10', category: 'OTC', rating: 4.4, reviews: 167, uses: 'Iron + Folic Acid', requiresRx: false, badge: null },
+            { id: 'panD', name: 'Pan D Capsule', company: 'Alkem', price: 125, mrp: 150, pack: 'Strip of 10', category: 'OTC', rating: 4.3, reviews: 178, uses: 'Acidity, Gastric', requiresRx: false, badge: null },
+            { id: 'pantocid', name: 'Pantocid DSR', company: 'Lupin', price: 115, mrp: 140, pack: 'Strip of 10', category: 'OTC', rating: 4.2, reviews: 134, uses: 'Acid Reflux, GERD', requiresRx: false, badge: null },
+            { id: 'gelusil', name: 'Gelusil MPS', company: 'Pfizer', price: 35, mrp: 45, pack: 'Bottle of 200ml', category: 'OTC', rating: 4.4, reviews: 234, uses: 'Acidity, Gas', requiresRx: false, badge: null },
+            { id: 'enantia', name: 'Enantia Charm', company: 'Mankind', price: 145, mrp: 180, pack: 'Tube', category: 'OTC', rating: 4.1, reviews: 89, uses: 'Fungal Infection', requiresRx: false, badge: null },
+            { id: 'zofer', name: 'Zofer MD 4mg', company: 'Fresenius Kabi', price: 45, mrp: 55, pack: 'Strip of 10', category: 'OTC', rating: 4.3, reviews: 156, uses: 'Nausea, Vomiting', requiresRx: false, badge: null },
+            { id: 'ondem', name: 'Ondem MD 4mg', company: 'Cipla', price: 48, mrp: 60, pack: 'Strip of 10', category: 'OTC', rating: 4.5, reviews: 234, uses: 'Nausea, Vomiting', requiresRx: false, badge: null },
             { id: 'levocetirizine', name: 'Levocetirizine 5mg', company: 'Sun Pharma', price: 65, mrp: 85, pack: 'Strip of 10', category: 'OTC', rating: 4.3, reviews: 345, uses: 'Allergy, Cold', requiresRx: false, badge: null },
+            { id: 'cetirizine', name: 'Cetirizine 10mg', company: 'Generic', price: 12, mrp: 15, pack: 'Strip of 10', category: 'OTC', rating: 4.2, reviews: 456, uses: 'Allergy, Itching', requiresRx: false, badge: null },
+            { id: 'allegra', name: 'Allegra 120mg', company: 'Sanofi', price: 145, mrp: 175, pack: 'Strip of 10', category: 'OTC', rating: 4.4, reviews: 234, uses: 'Allergy, Sneezing', requiresRx: false, badge: null },
+            { id: 'montair', name: 'Montair LC Kid', company: 'Cipla', price: 85, mrp: 100, pack: 'Strip of 10', category: 'OTC', rating: 4.3, reviews: 189, uses: 'Allergy, Cold in Kids', requiresRx: false, badge: null },
+            { id: 'squipLax', name: 'Squip-Lax Tablet', company: 'Sanofi', price: 45, mrp: 55, pack: 'Strip of 10', category: 'OTC', rating: 4.1, reviews: 98, uses: 'Constipation', requiresRx: false, badge: null },
+            { id: 'cremaffin', name: 'Cremaffin Plus', company: 'Cipla', price: 85, mrp: 100, pack: 'Bottle 225ml', category: 'OTC', rating: 4.4, reviews: 156, uses: 'Constipation, Gas', requiresRx: false, badge: null },
+            
+            // PRESCRIPTION MEDICINES
+            { id: 'azithromycin', name: 'Azithromycin 500mg', company: 'Cipla', price: 98, mrp: 120, pack: 'Strip of 3', category: 'Prescription', rating: 4.1, reviews: 89, uses: 'Bacterial infections', requiresRx: true, badge: 'Rx' },
+            { id: 'amoxicillin', name: 'Augmentin 625', company: 'GSK Pharma', price: 185, mrp: 220, pack: 'Strip of 10', category: 'Prescription', rating: 4.4, reviews: 234, uses: 'Bacterial Infection', requiresRx: true, badge: 'Rx' },
+            { id: 'metformin500', name: 'Metformin 500mg', company: 'Sun Pharma', price: 72, mrp: 85, pack: 'Strip of 10', category: 'Prescription', rating: 4.4, reviews: 245, uses: 'Diabetes', requiresRx: true, badge: null },
+            { id: 'metformin1000', name: 'Metformin 1000mg', company: 'Sun Pharma', price: 95, mrp: 115, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 178, uses: 'Diabetes', requiresRx: true, badge: null },
+            { id: 'glycometGP', name: 'Glycomet-GP 2', company: 'USV Pharma', price: 125, mrp: 150, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 134, uses: 'Diabetes', requiresRx: true, badge: null },
+            { id: 'teneligliptin', name: 'Teneligliptin 20mg', company: 'Jupiter', price: 145, mrp: 175, pack: 'Strip of 10', category: 'Prescription', rating: 4.1, reviews: 89, uses: 'Diabetes', requiresRx: true, badge: null },
+            { id: 'glimepiride', name: 'Glimepiride 2mg', company: 'Sanofi', price: 65, mrp: 80, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 167, uses: 'Diabetes', requiresRx: true, badge: null },
+            { id: 'amlo5', name: 'Amlodipine 5mg', company: 'Lupin', price: 85, mrp: 100, pack: 'Strip of 14', category: 'Prescription', rating: 4.2, reviews: 198, uses: 'Blood Pressure', requiresRx: true, badge: null },
+            { id: 'amlo10', name: 'Amlodipine 10mg', company: 'Lupin', price: 95, mrp: 115, pack: 'Strip of 14', category: 'Prescription', rating: 4.3, reviews: 156, uses: 'Blood Pressure', requiresRx: true, badge: null },
+            { id: 'losartan', name: 'Losartan 50mg', company: 'Cipla', price: 75, mrp: 90, pack: 'Strip of 10', category: 'Prescription', rating: 4.4, reviews: 234, uses: 'Blood Pressure', requiresRx: true, badge: null },
+            { id: 'telmisartan', name: 'Telmisartan 40mg', company: 'Cipla', price: 95, mrp: 115, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 189, uses: 'Blood Pressure', requiresRx: true, badge: null },
+            { id: 'chlord', name: 'Chlord 12.5mg', company: 'Sun Pharma', price: 85, mrp: 100, pack: 'Strip of 10', category: 'Prescription', rating: 4.1, reviews: 123, uses: 'Cholesterol', requiresRx: true, badge: null },
+            { id: 'rosuvastatin', name: 'Rosuvastatin 10mg', company: 'Lupin', price: 115, mrp: 140, pack: 'Strip of 10', category: 'Prescription', rating: 4.4, reviews: 167, uses: 'Cholesterol', requiresRx: true, badge: null },
+            { id: 'atorvastatin', name: 'Atorvastatin 20mg', company: 'Cipla', price: 85, mrp: 100, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 198, uses: 'Cholesterol', requiresRx: true, badge: null },
+            { id: 'rabeprazole20', name: 'Rabeprazole 20mg', company: 'Dr. Reddy\'s', price: 95, mrp: 120, pack: 'Strip of 10', category: 'Prescription', rating: 4.0, reviews: 134, uses: 'Acidity, GERD', requiresRx: true, badge: null },
+            { id: 'omeprazole20', name: 'Omeprazole 20mg', company: 'Cipla', price: 55, mrp: 70, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 289, uses: 'Acidity, Ulcer', requiresRx: true, badge: null },
+            { id: 'pantoprazole', name: 'Pantoprazole 40mg', company: 'Alkem', price: 85, mrp: 100, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 234, uses: 'Acid Reflux', requiresRx: true, badge: null },
+            { id: 'domperidone', name: 'Domperidone 10mg', company: 'Cipla', price: 45, mrp: 55, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 167, uses: 'Nausea, Gastric', requiresRx: true, badge: null },
+            { id: 'itopride', name: 'Itopride 50mg', company: 'Sun Pharma', price: 125, mrp: 150, pack: 'Strip of 10', category: 'Prescription', rating: 4.1, reviews: 89, uses: 'Gastric Motility', requiresRx: true, badge: null },
+            { id: 'betahistine', name: 'Betahistine 16mg', company: 'Cipla', price: 145, mrp: 175, pack: 'Strip of 10', category: 'Prescription', rating: 4.0, reviews: 67, uses: 'Vertigo, Tinnitus', requiresRx: true, badge: null },
+            { id: 'gabapentin', name: 'Gabapentin 300mg', company: 'Sun Pharma', price: 180, mrp: 220, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 123, uses: 'Neuropathic Pain', requiresRx: true, badge: null },
+            { id: 'pregabalin', name: 'Pregabalin 75mg', company: 'Cipla', price: 195, mrp: 240, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 98, uses: 'Neuropathic Pain, Anxiety', requiresRx: true, badge: null },
+            { id: 'montelukast', name: 'Montelukast 10mg', company: 'Lupin', price: 95, mrp: 120, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 156, uses: 'Asthma, Allergy', requiresRx: true, badge: null },
+            { id: 'salbutamol', name: 'Asthalin Inhaler', company: 'Cipla', price: 185, mrp: 220, pack: '200 MDI', category: 'Prescription', rating: 4.5, reviews: 234, uses: 'Asthma, Breathing', requiresRx: true, badge: null },
+            { id: 'budesonide', name: 'Budecort Inhaler', company: 'Cipla', price: 295, mrp: 350, pack: '200 MDI', category: 'Prescription', rating: 4.4, reviews: 167, uses: 'Asthma', requiresRx: true, badge: null },
+            { id: 'sertraline', name: 'Sertraline 50mg', company: 'Lupin', price: 85, mrp: 100, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 123, uses: 'Depression, Anxiety', requiresRx: true, badge: null },
+            { id: 'escitalopram', name: 'Escitalopram 10mg', company: 'Sun Pharma', price: 95, mrp: 115, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 156, uses: 'Depression', requiresRx: true, badge: null },
+            { id: 'clonazepam', name: 'Clonazepam 0.5mg', company: 'Sun Pharma', price: 35, mrp: 45, pack: 'Strip of 10', category: 'Prescription', rating: 4.1, reviews: 98, uses: 'Anxiety, Sleep', requiresRx: true, badge: null },
+            { id: 'clobazam', name: 'Clobazam 10mg', company: 'Sanofi', price: 65, mrp: 80, pack: 'Strip of 10', category: 'Prescription', rating: 4.0, reviews: 67, uses: 'Anxiety, Seizures', requiresRx: true, badge: null },
+            { id: 'thyronorm', name: 'Thyronorm 50mcg', company: 'Abbott', price: 45, mrp: 55, pack: 'Strip of 100', category: 'Prescription', rating: 4.5, reviews: 345, uses: 'Thyroid', requiresRx: true, badge: null },
+            { id: 'thyronorm75', name: 'Thyronorm 75mcg', company: 'Abbott', price: 48, mrp: 60, pack: 'Strip of 100', category: 'Prescription', rating: 4.5, reviews: 289, uses: 'Thyroid', requiresRx: true, badge: null },
+            { id: 'levothyroxine', name: 'Eltroxin 100mcg', company: 'GSK Pharma', price: 55, mrp: 70, pack: 'Strip of 100', category: 'Prescription', rating: 4.4, reviews: 234, uses: 'Hypothyroidism', requiresRx: true, badge: null },
+            { id: 'ciprofloxacin', name: 'Ciprofloxacin 500mg', company: 'Cipla', price: 65, mrp: 80, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 156, uses: 'Bacterial Infection', requiresRx: true, badge: null },
+            { id: 'ofloxacin', name: 'Ofloxacin 200mg', company: 'Sun Pharma', price: 55, mrp: 70, pack: 'Strip of 10', category: 'Prescription', rating: 4.1, reviews: 123, uses: 'UTI, Infection', requiresRx: true, badge: null },
+            { id: 'doxycycline', name: 'Doxycycline 100mg', company: 'Cipla', price: 85, mrp: 100, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 167, uses: 'Bacterial Infection', requiresRx: true, badge: null },
+            { id: 'cephalexin', name: 'Cephalexin 500mg', company: 'Lupin', price: 95, mrp: 115, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 98, uses: 'Skin Infection', requiresRx: true, badge: null },
+            { id: 'norfloxacin', name: 'Norfloxacin 400mg', company: 'Cipla', price: 65, mrp: 80, pack: 'Strip of 10', category: 'Prescription', rating: 4.0, reviews: 89, uses: 'UTI', requiresRx: true, badge: null },
+            { id: 'metronidazole', name: 'Metronidazole 400mg', company: 'Sun Pharma', price: 45, mrp: 55, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 178, uses: 'Bacterial Infection', requiresRx: true, badge: null },
+            { id: 'cefixime', name: 'Cefixime 200mg', company: 'Lupin', price: 125, mrp: 150, pack: 'Strip of 10', category: 'Prescription', rating: 4.2, reviews: 134, uses: 'Respiratory Infection', requiresRx: true, badge: null },
+            { id: 'warfarin', name: 'Warfarin 5mg', company: 'Sun Pharma', price: 55, mrp: 70, pack: 'Strip of 10', category: 'Prescription', rating: 4.1, reviews: 67, uses: 'Blood Clot', requiresRx: true, badge: null },
+            { id: 'clopidogrel', name: 'Clopidogrel 75mg', company: 'Cipla', price: 85, mrp: 100, pack: 'Strip of 10', category: 'Prescription', rating: 4.4, reviews: 198, uses: 'Heart, Blood Thinner', requiresRx: true, badge: null },
+            { id: 'aspirin75', name: 'Aspirin 75mg', company: 'Bayer', price: 25, mrp: 30, pack: 'Strip of 14', category: 'Prescription', rating: 4.5, reviews: 345, uses: 'Heart, Blood Thinner', requiresRx: true, badge: null },
+            { id: 'rosuvastatinE', name: 'Rosuvastatin 20mg', company: 'Lupin', price: 145, mrp: 175, pack: 'Strip of 10', category: 'Prescription', rating: 4.3, reviews: 134, uses: 'High Cholesterol', requiresRx: true, badge: null },
+            
+            // PERSONAL CARE
+            { id: 'shelcalM', name: 'Shelcal M Cream', company: 'Mankind', price: 180, mrp: 220, pack: '30g Tube', category: 'Personal Care', rating: 4.1, reviews: 89, uses: 'Calcium Deficiency', requiresRx: false, badge: null },
+            { id: 'clindamycin', name: 'Clindamycin Gel', company: 'Galderma', price: 195, mrp: 250, pack: '20g Tube', category: 'Personal Care', rating: 4.4, reviews: 234, uses: 'Acne, Skin', requiresRx: false, badge: null },
+            { id: 'tretinoin', name: 'Tretinoin 0.025%', company: 'J&J', price: 145, mrp: 180, pack: '20g Tube', category: 'Personal Care', rating: 4.3, reviews: 167, uses: 'Acne, Wrinkles', requiresRx: false, badge: null },
+            { id: 'benzacAC', name: 'Benzac AC Gel 2.5%', company: 'Galderma', price: 185, mrp: 225, pack: '30g Tube', category: 'Personal Care', rating: 4.4, reviews: 198, uses: 'Acne', requiresRx: false, badge: null },
+            { id: 'moisturex', name: 'Moisturex Soft', company: 'Cipla', price: 145, mrp: 175, pack: '100g Tube', category: 'Personal Care', rating: 4.5, reviews: 234, uses: 'Dry Skin, Moisturizer', requiresRx: false, badge: null },
+            { id: 'dermotologist', name: 'Cosvate-GM Cream', company: 'Cipla', price: 165, mrp: 200, pack: '15g Tube', category: 'Personal Care', rating: 4.2, reviews: 134, uses: 'Skin Inflammation', requiresRx: false, badge: null },
+            { id: 'povidone', name: 'Betadine Ointment', company: 'Win-Medicare', price: 85, mrp: 100, pack: '25g Tube', category: 'Personal Care', rating: 4.5, reviews: 289, uses: 'Wound Care, Antiseptic', requiresRx: false, badge: null },
+            { id: 'soframycin', name: 'Soframycin Cream', company: 'Sanofi', price: 95, mrp: 115, pack: '30g Tube', category: 'Personal Care', rating: 4.3, reviews: 178, uses: 'Skin Infection', requiresRx: false, badge: null },
+            { id: 'fexofed', name: 'Fexofed Mps Cream', company: 'Ajanta', price: 125, mrp: 150, pack: '15g Tube', category: 'Personal Care', rating: 4.1, reviews: 89, uses: 'Fungal Infection', requiresRx: false, badge: null },
+            { id: 'scabex', name: 'Scabex Lotion', company: 'Mankind', price: 145, mrp: 175, pack: '60ml Bottle', category: 'Personal Care', rating: 4.2, reviews: 123, uses: 'Scabies, Itching', requiresRx: false, badge: null },
+            { id: 'permethrin', name: 'Permethrin Cream', company: 'Generic', price: 85, mrp: 100, pack: '30g Tube', category: 'Personal Care', rating: 4.3, reviews: 156, uses: 'Scabies', requiresRx: false, badge: null },
+            { id: 'hydroquinone', name: 'Hydroquinone Cream', company: 'Mylan', price: 195, mrp: 240, pack: '20g Tube', category: 'Personal Care', rating: 4.2, reviews: 134, uses: 'Skin Lightening', requiresRx: false, badge: null },
+            { id: 'k8glow', name: 'K8 Glow Cream', company: 'Lupin', price: 245, mrp: 300, pack: '25g Tube', category: 'Personal Care', rating: 4.1, reviews: 98, uses: 'Pigmentation', requiresRx: false, badge: null },
+            { id: 'dettol', name: 'Dettol Antiseptic', company: 'Reckitt', price: 95, mrp: 120, pack: '500ml Bottle', category: 'Personal Care', rating: 4.6, reviews: 456, uses: 'Antiseptic, Wound Care', requiresRx: false, badge: null },
+            { id: 'savlon', name: 'Savlon Antiseptic', company: 'ITC', price: 85, mrp: 105, pack: '500ml Bottle', category: 'Personal Care', rating: 4.5, reviews: 378, uses: 'Antiseptic, Disinfectant', requiresRx: false, badge: null },
+            { id: 'lifebuoy', name: 'Lifebuoy Handwash', company: 'HUL', price: 75, mrp: 90, pack: '200ml Pump', category: 'Personal Care', rating: 4.4, reviews: 345, uses: 'Hand Hygiene', requiresRx: false, badge: null },
+            
+            // AYURVEDIC
+            { id: 'chawanprash', name: 'Chyawanprash', company: 'Dabur', price: 285, mrp: 350, pack: '500g Jar', category: 'Ayurvedic', rating: 4.5, reviews: 456, uses: 'Immunity, Energy', requiresRx: false, badge: 'Bestseller' },
+            { id: 'triphala', name: 'Triphala Churna', company: 'Baidyanath', price: 85, mrp: 100, pack: '100g Pack', category: 'Ayurvedic', rating: 4.3, reviews: 234, uses: 'Digestion, Constipation', requiresRx: false, badge: null },
+            { id: 'ashwagandha', name: 'Ashwagandha', company: 'Himalaya', price: 195, mrp: 240, pack: '60 Tablets', category: 'Ayurvedic', rating: 4.4, reviews: 345, uses: 'Stress, Energy', requiresRx: false, badge: 'Popular' },
+            { id: 'shilajit', name: 'Shilajit Gold', company: 'Himalaya', price: 285, mrp: 350, pack: '30 Capsules', category: 'Ayurvedic', rating: 4.5, reviews: 289, uses: 'Energy, Vitality', requiresRx: false, badge: null },
+            { id: 'arogyavardhini', name: 'Arogyavardhini Vati', company: 'Baidyanath', price: 65, mrp: 80, pack: '40 Tablets', category: 'Ayurvedic', rating: 4.2, reviews: 156, uses: 'Liver, Metabolism', requiresRx: false, badge: null },
+            { id: 'gymnema', name: 'Gymnema Sylvestre', company: 'Himalaya', price: 145, mrp: 175, pack: '60 Tablets', category: 'Ayurvedic', rating: 4.3, reviews: 178, uses: 'Diabetes Support', requiresRx: false, badge: null },
+            { id: 'pudinhara', name: 'Pudinhara Liquid', company: 'Baidyanath', price: 75, mrp: 90, pack: '100ml Bottle', category: 'Ayurvedic', rating: 4.4, reviews: 198, uses: 'Acidity, Gas', requiresRx: false, badge: null },
+            { id: 'kofol', name: 'Kofol Syrup', company: 'Himalaya', price: 125, mrp: 150, pack: '100ml Bottle', category: 'Ayurvedic', rating: 4.3, reviews: 234, uses: 'Cough, Cold', requiresRx: false, badge: null },
+            { id: 'septilin', name: 'Septilin Tablets', company: 'Himalaya', price: 145, mrp: 175, pack: '30 Tablets', category: 'Ayurvedic', rating: 4.4, reviews: 189, uses: 'Immunity, Infection', requiresRx: false, badge: null },
+            { id: 'rumalaya', name: 'Rumalaya Fort', company: 'Himalaya', price: 195, mrp: 240, pack: '30 Tablets', category: 'Ayurvedic', rating: 4.5, reviews: 234, uses: 'Joint Pain, Arthritis', requiresRx: false, badge: 'Popular' },
+            { id: 'lashun', name: 'Lasuna Capsule', company: 'Himalaya', price: 135, mrp: 165, pack: '60 Capsules', category: 'Ayurvedic', rating: 4.3, reviews: 167, uses: 'Cholesterol, Heart', requiresRx: false, badge: null },
+            { id: 'gasex', name: 'Gasex Tablet', company: 'Himalaya', price: 95, mrp: 115, pack: '30 Tablets', category: 'Ayurvedic', rating: 4.4, reviews: 198, uses: 'Gas, Indigestion', requiresRx: false, badge: null },
+            { id: 'liv52', name: 'Liv.52 DS', company: 'Himalaya', price: 165, mrp: 200, pack: '60 Tablets', category: 'Ayurvedic', rating: 4.5, reviews: 345, uses: 'Liver Health', requiresRx: false, badge: 'Bestseller' },
+            { id: 'cystone', name: 'Cystone Syrup', company: 'Himalaya', price: 145, mrp: 175, pack: '100ml Bottle', category: 'Ayurvedic', rating: 4.4, reviews: 234, uses: 'Kidney Stones, UTI', requiresRx: false, badge: null },
+            { id: 'mentat', name: 'Mentat DS', company: 'Himalaya', price: 175, mrp: 215, pack: '60 Tablets', category: 'Ayurvedic', rating: 4.3, reviews: 198, uses: 'Memory, Focus', requiresRx: false, badge: null },
+            { id: 'abana', name: 'Abana Tablet', company: 'Himalaya', price: 155, mrp: 190, pack: '60 Tablets', category: 'Ayurvedic', rating: 4.2, reviews: 167, uses: 'Heart, Cholesterol', requiresRx: false, badge: null },
+            { id: 'geriforte', name: 'Geriforte Tablet', company: 'Himalaya', price: 165, mrp: 200, pack: '60 Tablets', category: 'Ayurvedic', rating: 4.3, reviews: 145, uses: 'Stress, Aging', requiresRx: false, badge: null },
+            { id: 'punarnavasava', name: 'Punarnavasava', company: 'Baidyanath', price: 85, mrp: 100, pack: '200ml Bottle', category: 'Ayurvedic', rating: 4.1, reviews: 123, uses: 'Edema, Kidney', requiresRx: false, badge: null },
+            { id: 'arjuna', name: 'Arjuna Capsule', company: 'Himalaya', price: 135, mrp: 165, pack: '60 Capsules', category: 'Ayurvedic', rating: 4.4, reviews: 234, uses: 'Heart Health', requiresRx: false, badge: null },
+            { id: 'brahmi', name: 'Brahmi Capsule', company: 'Himalaya', price: 125, mrp: 150, pack: '60 Capsules', category: 'Ayurvedic', rating: 4.3, reviews: 198, uses: 'Memory, Brain', requiresRx: false, badge: null },
+            
+            // HEALTH DEVICES
+            { id: 'bpMonitor', name: 'Omron BP Monitor', company: 'Omron', price: 2495, mrp: 2999, pack: '1 Unit', category: 'Health Devices', rating: 4.6, reviews: 456, uses: 'Blood Pressure', requiresRx: false, badge: 'Popular' },
+            { id: 'bpMonitorManual', name: 'Diamond BP Monitor', company: 'Diamond', price: 595, mrp: 750, pack: '1 Unit', category: 'Health Devices', rating: 4.2, reviews: 234, uses: 'Blood Pressure', requiresRx: false, badge: null },
+            { id: 'glucoMeter', name: 'Accu-Check Glucometer', company: 'Roche', price: 1295, mrp: 1599, pack: '1 Unit', category: 'Health Devices', rating: 4.5, reviews: 378, uses: 'Blood Sugar', requiresRx: false, badge: null },
+            { id: 'glucoOne', name: 'GlucoOne Strips', company: 'Roche', price: 545, mrp: 650, pack: '50 Strips', category: 'Health Devices', rating: 4.4, reviews: 289, uses: 'Blood Sugar Test', requiresRx: false, badge: null },
+            { id: 'digitalTherm', name: 'Digital Thermometer', company: 'Omron', price: 295, mrp: 350, pack: '1 Unit', category: 'Health Devices', rating: 4.4, reviews: 345, uses: 'Fever, Temperature', requiresRx: false, badge: null },
+            { id: 'infraredTherm', name: 'Infrared Thermometer', company: 'Dr. Trust', price: 595, mrp: 750, pack: '1 Unit', category: 'Health Devices', rating: 4.3, reviews: 234, uses: 'Contactless Temp', requiresRx: false, badge: null },
+            { id: 'pulseOx', name: 'Pulse Oximeter', company: 'Dr. Trust', price: 895, mrp: 1100, pack: '1 Unit', category: 'Health Devices', rating: 4.4, reviews: 345, uses: 'Oxygen, Pulse', requiresRx: false, badge: 'Popular' },
+            { id: 'oxymed', name: 'Oxymed Fingertip Oximeter', company: 'Oxymed', price: 695, mrp: 850, pack: '1 Unit', category: 'Health Devices', rating: 4.3, reviews: 289, uses: 'SpO2, Pulse', requiresRx: false, badge: null },
+            { id: 'nebulizer', name: 'Omron Nebulizer', company: 'Omron', price: 2495, mrp: 2999, pack: '1 Unit', category: 'Health Devices', rating: 4.5, reviews: 234, uses: 'Asthma, Respiratory', requiresRx: false, badge: null },
+            { id: 'nebplus', name: 'Nebplus Nebulizer', company: 'Rossmax', price: 1795, mrp: 2199, pack: '1 Unit', category: 'Health Devices', rating: 4.4, reviews: 198, uses: 'Inhalation Therapy', requiresRx: false, badge: null },
+            { id: 'weightMachine', name: 'Digital Weighing Scale', company: 'Dr. Trust', price: 795, mrp: 999, pack: '1 Unit', category: 'Health Devices', rating: 4.3, reviews: 289, uses: 'Weight Check', requiresRx: false, badge: null },
+            { id: 'bodyFatScale', name: 'Body Fat Analyzer', company: 'Omron', price: 1995, mrp: 2499, pack: '1 Unit', category: 'Health Devices', rating: 4.2, reviews: 167, uses: 'Body Composition', requiresRx: false, badge: null },
+            { id: 'heatingPad', name: 'Electric Heating Pad', company: 'Dr. Ortho', price: 695, mrp: 850, pack: '1 Unit', category: 'Health Devices', rating: 4.3, reviews: 198, uses: 'Muscle Pain, Cramps', requiresRx: false, badge: null },
+            { id: 'tensUnit', name: 'TENS Unit', company: 'Omron', price: 1795, mrp: 2199, pack: '1 Unit', category: 'Health Devices', rating: 4.2, reviews: 134, uses: 'Pain Relief', requiresRx: false, badge: null },
+            { id: 'vaporizer', name: 'Cool Mist Vaporizer', company: 'Hindware', price: 995, mrp: 1200, pack: '1 Unit', category: 'Health Devices', rating: 4.3, reviews: 189, uses: 'Congestion, Humidifier', requiresRx: false, badge: null },
+            { id: 'airPurifier', name: 'Air Purifier', company: 'Philips', price: 4995, mrp: 5999, pack: '1 Unit', category: 'Health Devices', rating: 4.4, reviews: 234, uses: 'Air Quality', requiresRx: false, badge: null },
+            { id: 'neckMassager', name: 'Electric Neck Massager', company: 'Dr. Physio', price: 1495, mrp: 1899, pack: '1 Unit', category: 'Health Devices', rating: 4.2, reviews: 156, uses: 'Neck Pain, Relaxation', requiresRx: false, badge: null },
+            { id: 'massageChair', name: 'Mini Massage Chair', company: 'Grenhouse', price: 2495, mrp: 2999, pack: '1 Unit', category: 'Health Devices', rating: 4.1, reviews: 98, uses: 'Back Pain Relief', requiresRx: false, badge: null },
+            
+            // NUTRITION & SUPPLEMENTS
+            { id: 'wheyProtein', name: 'Asitis Whey Protein', company: 'Asitis', price: 1499, mrp: 1899, pack: '1kg Pack', category: 'Nutrition', rating: 4.4, reviews: 456, uses: 'Muscle Building, Fitness', requiresRx: false, badge: 'Popular' },
+            { id: 'massGainer', name: 'Bigmuscles Mass Gainer', company: 'Bigmuscles', price: 1199, mrp: 1499, pack: '1kg Pack', category: 'Nutrition', rating: 4.3, reviews: 345, uses: 'Weight Gain, Energy', requiresRx: false, badge: null },
+            { id: 'creatine', name: 'Creavita Creatine', company: 'Creavita', price: 899, mrp: 1099, pack: '300g Pack', category: 'Nutrition', rating: 4.5, reviews: 289, uses: 'Strength, Performance', requiresRx: false, badge: null },
+            { id: 'bcaa', name: 'Optimum Nutrition BCAA', company: 'ON', price: 1799, mrp: 2199, pack: '300g Pack', category: 'Nutrition', rating: 4.6, reviews: 234, uses: 'Muscle Recovery', requiresRx: false, badge: null },
+            { id: 'preworkout', name: 'Gat Nitraflex Preworkout', company: 'GAT', price: 1999, mrp: 2499, pack: '30 Servings', category: 'Nutrition', rating: 4.4, reviews: 198, uses: 'Energy, Workout', requiresRx: false, badge: null },
+            { id: 'omega3', name: 'Now Foods Omega-3', company: 'Now Foods', price: 795, mrp: 999, pack: '90 Softgels', category: 'Nutrition', rating: 4.5, reviews: 345, uses: 'Heart, Brain Health', requiresRx: false, badge: null },
+            { id: 'fishOil', name: 'Seven Seas Fish Oil', company: 'Seven Seas', price: 385, mrp: 450, pack: '30 Capsules', category: 'Nutrition', rating: 4.4, reviews: 289, uses: 'Omega-3, Immunity', requiresRx: false, badge: null },
+            { id: 'multivitaminS', name: 'Optimum Nutrition MV', company: 'ON', price: 1599, mrp: 1999, pack: '90 Tablets', category: 'Nutrition', rating: 4.6, reviews: 378, uses: 'Daily Vitamin', requiresRx: false, badge: 'Popular' },
+            { id: 'zincTabs', name: 'Zinc 50mg Tablets', company: 'Now Foods', price: 295, mrp: 350, pack: '60 Tablets', category: 'Nutrition', rating: 4.3, reviews: 234, uses: 'Immunity, Zinc', requiresRx: false, badge: null },
+            { id: 'vitC', name: 'Vitamin C 1000mg', company: 'Now Foods', price: 395, mrp: 499, pack: '90 Tablets', category: 'Nutrition', rating: 4.4, reviews: 345, uses: 'Immunity, Skin', requiresRx: false, badge: null },
+            { id: 'calciumTabs', name: 'Calcium Citrate + D3', company: 'Now Foods', price: 695, mrp: 850, pack: '120 Tablets', category: 'Nutrition', rating: 4.4, reviews: 289, uses: 'Bone Health', requiresRx: false, badge: null },
+            { id: 'magnesium', name: 'Magnesium Glycinate', company: 'Now Foods', price: 595, mrp: 750, pack: '90 Tablets', category: 'Nutrition', rating: 4.3, reviews: 234, uses: 'Sleep, Relaxation', requiresRx: false, badge: null },
+            { id: 'probiotics', name: 'Culturelle Probiotics', company: 'Culturelle', price: 1199, mrp: 1499, pack: '30 Packets', category: 'Nutrition', rating: 4.4, reviews: 198, uses: 'Gut Health, Digestion', requiresRx: false, badge: null },
+            { id: 'collagen', name: 'Skin Collagen', company: 'Himalaya', price: 895, mrp: 1099, pack: '30 Tablets', category: 'Nutrition', rating: 4.2, reviews: 167, uses: 'Skin, Hair, Nails', requiresRx: false, badge: null },
+            { id: 'biotin', name: 'Biotin 10000mcg', company: 'Natrol', price: 595, mrp: 750, pack: '150 Tablets', category: 'Nutrition', rating: 4.4, reviews: 234, uses: 'Hair, Skin, Nails', requiresRx: false, badge: null },
+            { id: 'glucosamine', name: 'Glucosamine Chondroitin', company: 'Now Foods', price: 995, mrp: 1199, pack: '90 Tablets', category: 'Nutrition', rating: 4.5, reviews: 289, uses: 'Joint Health', requiresRx: false, badge: null },
+            { id: 'coq10', name: 'CoQ10 100mg', company: 'Now Foods', price: 795, mrp: 999, pack: '60 Softgels', category: 'Nutrition', rating: 4.4, reviews: 198, uses: 'Heart, Energy', requiresRx: false, badge: null },
+            { id: 'melatonin', name: 'Melatonin 3mg', company: 'Natrol', price: 395, mrp: 499, pack: '90 Tablets', category: 'Nutrition', rating: 4.3, reviews: 234, uses: 'Sleep Aid', requiresRx: false, badge: null },
+            { id: 'ors', name: 'Electral ORS Sachets', company: 'FDC', price: 35, mrp: 45, pack: '5 Sachets', category: 'Nutrition', rating: 4.5, reviews: 456, uses: 'Dehydration, Energy', requiresRx: false, badge: null },
+            { id: 'horlicks', name: 'Horlicks Diabetic', company: 'HUL', price: 295, mrp: 350, pack: '400g Jar', category: 'Nutrition', rating: 4.2, reviews: 189, uses: 'Nutrition for Diabetics', requiresRx: false, badge: null },
+            
+            // BABY CARE
+            { id: 'cerelac', name: 'Cerelac Stage 3', company: 'Nestle', price: 285, mrp: 320, pack: '300g Pack', category: 'Baby Care', rating: 4.5, reviews: 456, uses: 'Baby Food', requiresRx: false, badge: 'Popular' },
+            { id: 'lactogen', name: 'Lactogen 1', company: 'Nestle', price: 395, mrp: 450, pack: '400g Pack', category: 'Baby Care', rating: 4.4, reviews: 378, uses: 'Infant Formula', requiresRx: false, badge: null },
+            { id: 'nanPro', name: 'Nan Pro 1', company: 'Nestle', price: 495, mrp: 575, pack: '400g Pack', category: 'Baby Care', rating: 4.5, reviews: 345, uses: 'Infant Formula', requiresRx: false, badge: null },
+            { id: 'similac', name: 'Similac Stage 1', company: 'Abbott', price: 485, mrp: 560, pack: '400g Pack', category: 'Baby Care', rating: 4.4, reviews: 289, uses: 'Infant Formula', requiresRx: false, badge: null },
+            { id: 'pampers', name: 'Pampers Active Baby', company: 'P&G', price: 795, mrp: 899, pack: '88 Diapers', category: 'Baby Care', rating: 4.6, reviews: 567, uses: 'Diapers', requiresRx: false, badge: 'Bestseller' },
+            { id: 'huggies', name: 'Huggies Little Movers', company: 'Kimberly Clark', price: 749, mrp: 850, pack: '80 Diapers', category: 'Baby Care', rating: 4.5, reviews: 456, uses: 'Diapers', requiresRx: false, badge: null },
+            { id: 'mamyPoko', name: 'MamyPoko Pants XL', company: 'Unicharm', price: 799, mrp: 899, pack: '76 Pants', category: 'Baby Care', rating: 4.4, reviews: 378, uses: 'Diapers', requiresRx: false, badge: null },
+            { id: 'johnsons', name: 'Johnson\'s Baby Powder', company: 'J&J', price: 165, mrp: 195, pack: '200g', category: 'Baby Care', rating: 4.4, reviews: 456, uses: 'Baby Care', requiresRx: false, badge: null },
+            { id: 'johnsonsOil', name: 'Johnson\'s Baby Oil', company: 'J&J', price: 185, mrp: 220, pack: '200ml', category: 'Baby Care', rating: 4.5, reviews: 389, uses: 'Massage, Skin', requiresRx: false, badge: null },
+            { id: 'johnsonsShampoo', name: 'Johnson\'s Baby Shampoo', company: 'J&J', price: 175, mrp: 210, pack: '200ml', category: 'Baby Care', rating: 4.4, reviews: 456, uses: 'Hair Care', requiresRx: false, badge: null },
+            { id: 'sebaMed', name: 'Sebamed Baby Lotion', company: 'Sebamed', price: 385, mrp: 450, pack: '200ml', category: 'Baby Care', rating: 4.5, reviews: 289, uses: 'Baby Moisturizer', requiresRx: false, badge: null },
+            { id: 'sudocrem', name: 'Sudocrem Baby Cream', company: 'Forest Labs', price: 295, mrp: 350, pack: '125g', category: 'Baby Care', rating: 4.5, reviews: 345, uses: 'Rash Cream', requiresRx: false, badge: 'Popular' },
+            { id: 'mylanta', name: 'Mylanta Gel', company: 'J&J', price: 195, mrp: 235, pack: '100ml', category: 'Baby Care', rating: 4.3, reviews: 234, uses: 'Colic, Gas', requiresRx: false, badge: null },
+            { id: 'gripeWater', name: 'Woodwards Gripe Water', company: 'Haleon', price: 145, mrp: 175, pack: '100ml', category: 'Baby Care', rating: 4.4, reviews: 345, uses: 'Gripe, Colic', requiresRx: false, badge: null },
+            { id: 'babyTherm', name: 'Digital Baby Thermometer', company: 'Omron', price: 395, mrp: 499, pack: '1 Unit', category: 'Baby Care', rating: 4.4, reviews: 289, uses: 'Baby Fever Check', requiresRx: false, badge: null },
+            
+            // DENTAL CARE
+            { id: 'colgate', name: 'Colgate Total', company: 'Colgate', price: 145, mrp: 175, pack: '150g Tube', category: 'Dental Care', rating: 4.5, reviews: 567, uses: 'Toothpaste, Cavity', requiresRx: false, badge: 'Popular' },
+            { id: 'colgateSensitive', name: 'Colgate Sensitive', company: 'Colgate', price: 165, mrp: 195, pack: '150g Tube', category: 'Dental Care', rating: 4.4, reviews: 456, uses: 'Sensitive Teeth', requiresRx: false, badge: null },
+            { id: 'sensodyne', name: 'Sensodyne Repair', company: 'GSK', price: 185, mrp: 220, pack: '140g Tube', category: 'Dental Care', rating: 4.5, reviews: 389, uses: 'Sensitive Teeth', requiresRx: false, badge: null },
+            { id: 'pepsodent', name: 'Pepsodent Expert', company: 'HUL', price: 95, mrp: 115, pack: '150g Tube', category: 'Dental Care', rating: 4.3, reviews: 345, uses: 'Toothpaste', requiresRx: false, badge: null },
+            { id: 'oralB', name: 'Oral-B Toothbrush', company: 'P&G', price: 245, mrp: 295, pack: '1 Unit', category: 'Dental Care', rating: 4.5, reviews: 456, uses: 'Toothbrush', requiresRx: false, badge: null },
+            { id: 'colgateBrush', name: 'Colgate ZigZag', company: 'Colgate', price: 85, mrp: 100, pack: '2 Brushes', category: 'Dental Care', rating: 4.3, reviews: 345, uses: 'Toothbrush', requiresRx: false, badge: null },
+            { id: 'mouthwash', name: 'Listerine Cool Mint', company: 'J&J', price: 195, mrp: 235, pack: '250ml', category: 'Dental Care', rating: 4.5, reviews: 456, uses: 'Mouthwash, Fresh Breath', requiresRx: false, badge: null },
+            { id: 'chlorhexidine', name: 'Chlorhexidine Mouthwash', company: 'Rx', price: 145, mrp: 175, pack: '100ml', category: 'Dental Care', rating: 4.4, reviews: 234, uses: 'Gum Care, Antiseptic', requiresRx: false, badge: null },
+            { id: 'dentalFloss', name: 'Colgate Floss', company: 'Colgate', price: 95, mrp: 115, pack: '50m Pack', category: 'Dental Care', rating: 4.3, reviews: 289, uses: 'Floss, Interdental', requiresRx: false, badge: null },
+            { id: 'toothMousse', name: 'GC Tooth Mousse', company: 'GC', price: 395, mrp: 475, pack: '40g Tube', category: 'Dental Care', rating: 4.4, reviews: 198, uses: 'Tooth Remineralization', requiresRx: false, badge: null },
+            { id: 'saltBrush', name: 'Sensodyne Salt Toothpaste', company: 'GSK', price: 175, mrp: 210, pack: '140g Tube', category: 'Dental Care', rating: 4.3, reviews: 234, uses: 'Sensitive, Gum Care', requiresRx: false, badge: null },
+            { id: 'charcoalPaste', name: 'Colgate Charcoal', company: 'Colgate', price: 155, mrp: 185, pack: '140g Tube', category: 'Dental Care', rating: 4.2, reviews: 189, uses: 'Whitening, Charcoal', requiresRx: false, badge: null },
         ];
 
         const cart = [
@@ -1489,6 +1732,67 @@
             if (screenId === 'search-screen') {
                 renderSearchResults();
             }
+            if (screenId === 'categories-screen') {
+                updateCategoryCounts();
+            }
+        }
+
+        function updateCategoryCounts() {
+            const categories = {
+                'OTC': 'otc-count',
+                'Prescription': 'rx-count',
+                'Ayurvedic': 'ayur-count',
+                'Personal Care': 'personal-count',
+                'Health Devices': 'devices-count',
+                'Nutrition': 'nutrition-count',
+                'Baby Care': 'baby-count',
+                'Dental Care': 'dental-count'
+            };
+            
+            for (const [cat, elId] of Object.entries(categories)) {
+                const count = medicines.filter(m => m.category === cat).length;
+                const el = document.getElementById(elId);
+                if (el) el.textContent = count + ' Products';
+            }
+        }
+
+        function showCategoryProducts(category) {
+            document.getElementById('category-title').textContent = category;
+            document.getElementById('category-subtitle').textContent = `Showing all ${category} products`;
+            
+            const filtered = medicines.filter(m => m.category === category);
+            const list = document.getElementById('category-products-list');
+            
+            if (filtered.length === 0) {
+                list.innerHTML = '<p class="text-center text-slate-500 py-8">No products found in this category</p>';
+            } else {
+                list.innerHTML = filtered.map(m => `
+                    <div onclick="showScreen('product-detail'); selectProduct('${m.id}')" class="bg-white rounded-xl p-3 card-shadow flex items-center gap-3 cursor-pointer">
+                        <div class="w-16 h-16 bg-slate-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=100&h=100&fit=crop" class="w-full h-full object-contain rounded-xl" onerror="this.style.display='none'">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1 min-w-0">
+                                    <h3 class="font-semibold text-sm line-clamp-1">${m.name}</h3>
+                                    <p class="text-xs text-slate-500 line-clamp-1">${m.company} | ${m.pack}</p>
+                                    <p class="text-[10px] text-slate-400 mt-0.5">${m.uses}</p>
+                                </div>
+                                ${m.requiresRx ? '<span class="bg-red-100 text-red-600 text-[10px] px-2 py-0.5 rounded-full flex-shrink-0">Rx</span>' : ''}
+                            </div>
+                            <div class="flex items-center justify-between mt-2">
+                                <div>
+                                    <span class="font-bold text-primary-600">₹${m.price}</span>
+                                    <span class="text-xs text-slate-400 line-through ml-1">₹${m.mrp}</span>
+                                </div>
+                                <button onclick="event.stopPropagation(); addToCart('${m.name}')" class="bg-primary-600 text-white px-3 py-1.5 rounded-lg text-xs font-medium">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            showScreen('category-products-screen');
         }
 
         function showNotifications() {
@@ -1655,14 +1959,28 @@
         }
 
         // Banner carousel
-        setInterval(() => {
-            currentBanner = (currentBanner + 1) % 3;
+        const totalBanners = 5;
+        function updateBanner() {
             document.getElementById('banner-carousel').style.transform = `translateX(-${currentBanner * 100}%)`;
             document.querySelectorAll('.banner-dot').forEach((dot, i) => {
-                dot.classList.toggle('bg-white', i === currentBanner);
-                dot.classList.toggle('bg-white/50', i !== currentBanner);
+                if (i === currentBanner) {
+                    dot.classList.remove('bg-white/50', 'w-1.5', 'h-1.5');
+                    dot.classList.add('bg-white', 'w-6', 'h-1.5');
+                } else {
+                    dot.classList.remove('bg-white', 'w-6');
+                    dot.classList.add('bg-white/50', 'w-1.5', 'h-1.5');
+                }
             });
-        }, 4000);
+        }
+        function nextBanner() {
+            currentBanner = (currentBanner + 1) % totalBanners;
+            updateBanner();
+        }
+        function prevBanner() {
+            currentBanner = (currentBanner - 1 + totalBanners) % totalBanners;
+            updateBanner();
+        }
+        setInterval(nextBanner, 5000);
 
         // Render medicine grid on load
         function renderMedicineGrid() {
