@@ -218,7 +218,7 @@
     </div>
 
     <!-- ==================== HOME SCREEN (APP-LIKE) ==================== -->
-    <div id="home-screen" class="screen h-full" style="opacity: 0;">
+    <div id="home-screen" class="screen h-full">
         <!-- Status Bar / Header -->
         <header class="notch-safe bg-white border-b border-slate-100 px-4 pb-3 pt-2 flex-shrink-0" style="flex: 0 0 auto;">
             <div class="flex items-center justify-between">
@@ -345,6 +345,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Gap -->
+            <div class="h-4"></div>
 
             <!-- Quick Actions -->
             <div class="px-4 grid grid-cols-4 gap-3 mb-6">
@@ -2122,19 +2125,12 @@
             document.getElementById('desktop-app').classList.remove('hidden');
             renderDesktopMedicineGrid();
         } else {
-            // Mobile mode - show mobile app with slide animation
+            // Mobile mode - show mobile app
             setTimeout(() => {
-                // Slide out splash screen
-                const splash = document.getElementById('splash-screen');
-                splash.classList.add('animate-slideOutUp');
-                
-                setTimeout(() => {
-                    splash.classList.remove('active', 'animate-slideOutUp');
-                    const homeScreen = document.getElementById('home-screen');
-                    homeScreen.classList.add('active', 'animate-fadeInScale');
-                    renderMedicineGrid();
-                    renderCartItems();
-                }, 500);
+                document.getElementById('splash-screen').classList.remove('active');
+                showScreen('home-screen');
+                renderMedicineGrid();
+                renderCartItems();
             }, 2000);
         }
 
