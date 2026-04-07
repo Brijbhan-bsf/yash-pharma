@@ -131,6 +131,17 @@
         @media (max-width: 1023px) {
             .desktop-sidebar, .desktop-header, .desktop-wrapper, .desktop-main, .desktop-content { display: none !important; }
             .app-container { display: block; }
+            
+            /* Fix mobile layout */
+            #home-screen header {
+                flex-shrink: 0;
+                height: auto;
+            }
+            #home-screen main {
+                flex: 1 1 0%;
+                min-height: 0;
+                overflow-y: auto;
+            }
         }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
@@ -205,7 +216,7 @@
     <!-- ==================== HOME SCREEN (APP-LIKE) ==================== -->
     <div id="home-screen" class="screen h-full">
         <!-- Status Bar / Header -->
-        <header class="notch-safe bg-white border-b border-slate-100 px-4 pb-3 pt-2 flex-shrink-0">
+        <header class="notch-safe bg-white border-b border-slate-100 px-4 pb-3 pt-2 flex-shrink-0" style="flex: 0 0 auto;">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-xl flex items-center justify-center">
@@ -244,10 +255,10 @@
         </header>
 
         <!-- Main Content -->
-        <main class="flex-1 overflow-y-auto pb-20 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:none]">
+        <main class="flex-1 min-h-0 overflow-y-auto pb-20 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:none]" style="flex: 1 1 0%;">
             <!-- Banner Carousel -->
             <div class="mx-4 mt-3">
-                <div class="relative overflow-hidden rounded-xl shadow-md" style="height: 140px;">
+                <div class="relative overflow-hidden rounded-xl shadow-md" style="height: 120px; flex-shrink: 0;">
                     <div id="banner-carousel" class="flex h-full transition-transform duration-500">
                         <!-- Slide 1 - Ayurvedic -->
                         <div class="w-full h-full flex-shrink-0 relative">
@@ -259,7 +270,7 @@
                                     <p class="text-xs text-green-100 mb-2">On Ayurvedic Medicines</p>
                                     <button class="bg-white text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Shop Now</button>
                                 </div>
-                                <div class="ml-auto text-7xl opacity-20">🌿</div>
+                                <div class="ml-auto text-5xl opacity-20 leading-none">🌿</div>
                             </div>
                         </div>
                         <!-- Slide 2 - Free Delivery -->
@@ -272,7 +283,7 @@
                                     <p class="text-xs text-blue-100 mb-2">On Orders ₹299+</p>
                                     <button class="bg-white text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Order Now</button>
                                 </div>
-                                <div class="ml-auto text-7xl opacity-20">🚚</div>
+                                <div class="ml-auto text-5xl opacity-20 leading-none">🚚</div>
                             </div>
                         </div>
                         <!-- Slide 3 - Doctor -->
@@ -285,7 +296,7 @@
                                     <p class="text-xs text-teal-100 mb-2">Video Call Specialists</p>
                                     <button onclick="showScreen('doctors-screen')" class="bg-white text-teal-700 px-3 py-1 rounded-full text-xs font-semibold">Consult Now</button>
                                 </div>
-                                <div class="ml-auto text-7xl opacity-20">🩺</div>
+                                <div class="ml-auto text-5xl opacity-20 leading-none">🩺</div>
                             </div>
                         </div>
                         <!-- Slide 4 - Lab Tests -->
@@ -298,7 +309,7 @@
                                     <p class="text-xs text-purple-100 mb-2">Starting ₹499</p>
                                     <button onclick="showScreen('lab-tests-screen')" class="bg-white text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Book Now</button>
                                 </div>
-                                <div class="ml-auto text-7xl opacity-20">🧪</div>
+                                <div class="ml-auto text-5xl opacity-20 leading-none">🧪</div>
                             </div>
                         </div>
                         <!-- Slide 5 - Diabetes -->
@@ -311,7 +322,7 @@
                                     <p class="text-xs text-orange-100 mb-2">Up to 30% OFF</p>
                                     <button class="bg-white text-orange-700 px-3 py-1 rounded-full text-xs font-semibold">Shop Now</button>
                                 </div>
-                                <div class="ml-auto text-7xl opacity-20">💊</div>
+                                <div class="ml-auto text-5xl opacity-20 leading-none">💊</div>
                             </div>
                         </div>
                     </div>
