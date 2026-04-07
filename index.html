@@ -23,7 +23,11 @@
         }
     </script>
     <style>
-        * { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        * { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+        html, body { 
+            height: 100%; 
+            overflow: hidden;
+        }
         body { overscroll-behavior-y: contain; }
         ::-webkit-scrollbar { width: 8px; height: 8px; }
         ::-webkit-scrollbar-track { background: #f1f5f9; }
@@ -33,9 +37,14 @@
         /* Hide app container on desktop */
         .app-container { display: contents; }
         
+        /* Mobile app layout */
+        @media (max-width: 1023px) {
+            html, body { overflow: hidden; height: 100%; }
+        }
+        
         /* Desktop Website Layout */
         @media (min-width: 1024px) {
-            body { background: #f8fafc; }
+            body { background: #f8fafc; overflow: auto; }
             
             .desktop-wrapper { display: flex; min-height: 100vh; }
             .desktop-sidebar { 
@@ -51,6 +60,37 @@
                 display: flex;
                 flex-direction: column;
             }
+            .desktop-main { 
+                margin-left: 260px; 
+                flex: 1;
+                min-height: 100vh;
+            }
+            .desktop-header {
+                background: white;
+                border-bottom: 1px solid #e2e8f0;
+                padding: 16px 32px;
+                position: sticky;
+                top: 0;
+                z-index: 40;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .desktop-content {
+                padding: 32px;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            
+            /* Desktop Grid */
+            .desktop-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+            .desktop-grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+            
+            /* Hide mobile nav on desktop */
+            .mobile-bottom-nav { display: none !important; }
+            .mobile-header { display: none !important; }
+            .mobile-screen { min-height: auto !important; }
+        }
             .desktop-main { 
                 margin-left: 260px; 
                 flex: 1;
@@ -107,8 +147,22 @@
         .animate-spin { animation: spin 1s linear infinite; }
         .screen { display: none; }
         @media (max-width: 1023px) {
-            .screen.active { display: flex; flex-direction: column; }
-            .mobile-screen { min-height: 100vh; }
+            .screen.active { 
+                display: flex; 
+                flex-direction: column; 
+                height: 100dvh;
+                overflow: hidden;
+            }
+        }
+        
+        /* Mobile: ensure screen takes full height */
+        @media (max-width: 1023px) {
+            #home-screen, #search-screen, #cart-screen, #categories-screen, 
+            #category-products-screen, #product-detail, #checkout-screen,
+            #order-success-screen, #order-tracking-screen, #doctors-screen,
+            #upload-rx-screen, #profile-screen, #lab-tests-screen, #offers-screen {
+                height: 100dvh !important;
+            }
         }
         .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
         .gradient-text { background: linear-gradient(135deg, #2563eb 0%, #059669 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -149,9 +203,9 @@
     </div>
 
     <!-- ==================== HOME SCREEN (APP-LIKE) ==================== -->
-    <div id="home-screen" class="screen h-screen">
+    <div id="home-screen" class="screen h-full">
         <!-- Status Bar / Header -->
-        <header class="notch-safe bg-white border-b border-slate-100 px-4 pb-3 pt-2">
+        <header class="notch-safe bg-white border-b border-slate-100 px-4 pb-3 pt-2 flex-shrink-0">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-xl flex items-center justify-center">
@@ -190,10 +244,10 @@
         </header>
 
         <!-- Main Content -->
-        <main class="flex-1 overflow-y-auto pb-20">
+        <main class="flex-1 overflow-y-auto pb-20 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:none]">
             <!-- Banner Carousel - Modern Attractive -->
-            <div class="px-4 pt-4">
-                <div class="relative rounded-2xl overflow-hidden h-[180px] md:h-[200px] shadow-xl">
+            <div class="px-4 pt-3">
+                <div class="relative rounded-2xl overflow-hidden h-[160px] md:h-[180px] shadow-lg">
                     <div id="banner-carousel" class="flex transition-transform duration-700 ease-out">
                         <!-- Slide 1 - Ayurvedic -->
                         <div class="w-full flex-shrink-0 relative h-full">
@@ -557,7 +611,7 @@
         </main>
 
         <!-- Bottom Navigation -->
-        <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 safe-bottom z-40">
+        <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 safe-bottom z-40 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:none]">
             <div class="flex justify-around py-2">
                 <button onclick="showScreen('home-screen')" class="flex flex-col items-center p-2 text-primary-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
