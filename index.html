@@ -151,8 +151,12 @@
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes slideOutUp { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-100%); opacity: 0; } }
+        @keyframes fadeInScale { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
         .animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
         .animate-slideUp { animation: slideUp 0.3s ease-out forwards; }
+        .animate-slideOutUp { animation: slideOutUp 0.5s ease-out forwards; }
+        .animate-fadeInScale { animation: fadeInScale 0.5s ease-out forwards; }
         .animate-scaleIn { animation: scaleIn 0.3s ease-out forwards; }
         .animate-pulse { animation: pulse 2s ease-in-out infinite; }
         .animate-spin { animation: spin 1s linear infinite; }
@@ -214,7 +218,7 @@
     </div>
 
     <!-- ==================== HOME SCREEN (APP-LIKE) ==================== -->
-    <div id="home-screen" class="screen h-full">
+    <div id="home-screen" class="screen h-full" style="opacity: 0;">
         <!-- Status Bar / Header -->
         <header class="notch-safe bg-white border-b border-slate-100 px-4 pb-3 pt-2 flex-shrink-0" style="flex: 0 0 auto;">
             <div class="flex items-center justify-between">
@@ -257,72 +261,77 @@
         <!-- Main Content -->
         <main class="flex-1 min-h-0 overflow-y-auto pb-20 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:none]" style="flex: 1 1 0%;">
             <!-- Banner Carousel -->
-            <div class="mx-4 mt-3">
-                <div class="relative overflow-hidden rounded-xl shadow-md" style="height: 120px; flex-shrink: 0;">
+            <div class="mx-4 mt-2">
+                <div class="relative overflow-hidden rounded-xl shadow-md" style="height: 130px; flex-shrink: 0;">
                     <div id="banner-carousel" class="flex h-full transition-transform duration-500">
                         <!-- Slide 1 - Ayurvedic -->
-                        <div class="w-full h-full flex-shrink-0 relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-green-700"></div>
-                            <div class="absolute inset-0 flex items-center px-4">
+                        <div class="w-full h-full flex-shrink-0 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-green-800"></div>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIxMjAiIGZpbGw9IiMwMDk4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJib2xkIj7wn5aVPC90ZXh0Pjwvc3ZnPg==" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="">
+                            <div class="absolute inset-0 flex items-center px-5">
                                 <div class="text-white">
-                                    <p class="text-[10px] font-medium text-green-100 mb-0.5">🌿 NATURAL</p>
+                                    <p class="text-[11px] font-medium text-green-200 mb-0.5">🌿 AYURVEDIC</p>
                                     <h3 class="text-lg font-bold leading-tight">Get 25% OFF</h3>
                                     <p class="text-xs text-green-100 mb-2">On Ayurvedic Medicines</p>
                                     <button class="bg-white text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Shop Now</button>
                                 </div>
-                                <div class="ml-auto text-5xl opacity-20 leading-none">🌿</div>
+                                <div class="ml-auto text-6xl opacity-25">🌿</div>
                             </div>
                         </div>
                         <!-- Slide 2 - Free Delivery -->
-                        <div class="w-full h-full flex-shrink-0 relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700"></div>
-                            <div class="absolute inset-0 flex items-center px-4">
+                        <div class="w-full h-full flex-shrink-0 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800"></div>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIxMjAiIGZpbGw9IiMwMDk4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJib2xkIj7wn5K6PC90ZXh0Pjwvc3ZnPg==" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="">
+                            <div class="absolute inset-0 flex items-center px-5">
                                 <div class="text-white">
-                                    <p class="text-[10px] font-medium text-blue-100 mb-0.5">🚚 FREE SHIPPING</p>
+                                    <p class="text-[11px] font-medium text-blue-200 mb-0.5">🚚 FREE SHIPPING</p>
                                     <h3 class="text-lg font-bold leading-tight">Free Delivery</h3>
                                     <p class="text-xs text-blue-100 mb-2">On Orders ₹299+</p>
                                     <button class="bg-white text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Order Now</button>
                                 </div>
-                                <div class="ml-auto text-5xl opacity-20 leading-none">🚚</div>
+                                <div class="ml-auto text-6xl opacity-25">🚚</div>
                             </div>
                         </div>
                         <!-- Slide 3 - Doctor -->
-                        <div class="w-full h-full flex-shrink-0 relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-700"></div>
-                            <div class="absolute inset-0 flex items-center px-4">
+                        <div class="w-full h-full flex-shrink-0 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-teal-600 to-teal-800"></div>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIxMjAiIGZpbGw9IiMwMDk4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJib2xkIj7wn5SYPcK8PC90ZXh0Pjwvc3ZnPg==" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="">
+                            <div class="absolute inset-0 flex items-center px-5">
                                 <div class="text-white">
-                                    <p class="text-[10px] font-medium text-teal-100 mb-0.5">👨‍⚕️ EXPERT DOCTORS</p>
+                                    <p class="text-[11px] font-medium text-teal-200 mb-0.5">👨‍⚕️ EXPERT DOCTORS</p>
                                     <h3 class="text-lg font-bold leading-tight">Free Consultation</h3>
                                     <p class="text-xs text-teal-100 mb-2">Video Call Specialists</p>
                                     <button onclick="showScreen('doctors-screen')" class="bg-white text-teal-700 px-3 py-1 rounded-full text-xs font-semibold">Consult Now</button>
                                 </div>
-                                <div class="ml-auto text-5xl opacity-20 leading-none">🩺</div>
+                                <div class="ml-auto text-6xl opacity-25">🩺</div>
                             </div>
                         </div>
                         <!-- Slide 4 - Lab Tests -->
-                        <div class="w-full h-full flex-shrink-0 relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-700"></div>
-                            <div class="absolute inset-0 flex items-center px-4">
+                        <div class="w-full h-full flex-shrink-0 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800"></div>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIxMjAiIGZpbGw9IiMwMDk4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJib2xkIj7wn5Y5PC90ZXh0Pjwvc3ZnPg==" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="">
+                            <div class="absolute inset-0 flex items-center px-5">
                                 <div class="text-white">
-                                    <p class="text-[10px] font-medium text-purple-100 mb-0.5">🧪 LAB TESTS</p>
+                                    <p class="text-[11px] font-medium text-purple-200 mb-0.5">🧪 LAB TESTS</p>
                                     <h3 class="text-lg font-bold leading-tight">Full Body Checkup</h3>
                                     <p class="text-xs text-purple-100 mb-2">Starting ₹499</p>
                                     <button onclick="showScreen('lab-tests-screen')" class="bg-white text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Book Now</button>
                                 </div>
-                                <div class="ml-auto text-5xl opacity-20 leading-none">🧪</div>
+                                <div class="ml-auto text-6xl opacity-25">🧪</div>
                             </div>
                         </div>
                         <!-- Slide 5 - Diabetes -->
-                        <div class="w-full h-full flex-shrink-0 relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700"></div>
-                            <div class="absolute inset-0 flex items-center px-4">
+                        <div class="w-full h-full flex-shrink-0 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-orange-600 to-orange-800"></div>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIxMjAiIGZpbGw9IiMwMDk4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJib2xkIj7wn5I4PC90ZXh0Pjwvc3ZnPg==" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="">
+                            <div class="absolute inset-0 flex items-center px-5">
                                 <div class="text-white">
-                                    <p class="text-[10px] font-medium text-orange-100 mb-0.5">💉 DIABETES</p>
+                                    <p class="text-[11px] font-medium text-orange-200 mb-0.5">💉 DIABETES</p>
                                     <h3 class="text-lg font-bold leading-tight">Sugar Free Meds</h3>
                                     <p class="text-xs text-orange-100 mb-2">Up to 30% OFF</p>
                                     <button class="bg-white text-orange-700 px-3 py-1 rounded-full text-xs font-semibold">Shop Now</button>
                                 </div>
-                                <div class="ml-auto text-5xl opacity-20 leading-none">💊</div>
+                                <div class="ml-auto text-6xl opacity-25">💊</div>
                             </div>
                         </div>
                     </div>
@@ -2113,12 +2122,19 @@
             document.getElementById('desktop-app').classList.remove('hidden');
             renderDesktopMedicineGrid();
         } else {
-            // Mobile mode - show mobile app
+            // Mobile mode - show mobile app with slide animation
             setTimeout(() => {
-                document.getElementById('splash-screen').classList.remove('active');
-                showScreen('home-screen');
-                renderMedicineGrid();
-                renderCartItems();
+                // Slide out splash screen
+                const splash = document.getElementById('splash-screen');
+                splash.classList.add('animate-slideOutUp');
+                
+                setTimeout(() => {
+                    splash.classList.remove('active', 'animate-slideOutUp');
+                    const homeScreen = document.getElementById('home-screen');
+                    homeScreen.classList.add('active', 'animate-fadeInScale');
+                    renderMedicineGrid();
+                    renderCartItems();
+                }, 500);
             }, 2000);
         }
 
