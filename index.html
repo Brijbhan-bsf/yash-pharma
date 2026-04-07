@@ -1351,6 +1351,61 @@
         </main>
     </div>
 
+    <!-- ==================== CATEGORIES SCREEN ==================== -->
+    <div id="categories-screen" class="screen h-screen">
+        <header class="notch-safe bg-white border-b border-slate-100 px-4 pb-3 pt-2 flex items-center">
+            <button onclick="showScreen('home-screen')" class="w-10 h-10 flex items-center justify-center">
+                <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <h1 class="text-lg font-bold flex-1 text-center pr-10">Categories</h1>
+        </header>
+
+        <main class="flex-1 overflow-y-auto pb-6 px-4">
+            <div class="grid grid-cols-2 gap-4 mt-4">
+                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">💊</div>
+                    <h3 class="font-semibold">OTC Medicines</h3>
+                    <p class="text-xs text-slate-500 mt-1">150+ Products</p>
+                </div>
+                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-red-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🩺</div>
+                    <h3 class="font-semibold">Prescription</h3>
+                    <p class="text-xs text-slate-500 mt-1">200+ Products</p>
+                </div>
+                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🌿</div>
+                    <h3 class="font-semibold">Ayurvedic</h3>
+                    <p class="text-xs text-slate-500 mt-1">80+ Products</p>
+                </div>
+                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🧴</div>
+                    <h3 class="font-semibold">Personal Care</h3>
+                    <p class="text-xs text-slate-500 mt-1">120+ Products</p>
+                </div>
+                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-orange-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">❤️</div>
+                    <h3 class="font-semibold">Health Devices</h3>
+                    <p class="text-xs text-slate-500 mt-1">45+ Products</p>
+                </div>
+                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🥤</div>
+                    <h3 class="font-semibold">Nutrition</h3>
+                    <p class="text-xs text-slate-500 mt-1">60+ Products</p>
+                </div>
+                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-pink-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">👶</div>
+                    <h3 class="font-semibold">Baby Care</h3>
+                    <p class="text-xs text-slate-500 mt-1">35+ Products</p>
+                </div>
+                <div onclick="showScreen('home-screen')" class="bg-white rounded-2xl p-4 card-shadow text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-teal-100 rounded-xl mx-auto mb-3 flex items-center justify-center text-3xl">🦷</div>
+                    <h3 class="font-semibold">Dental Care</h3>
+                    <p class="text-xs text-slate-500 mt-1">25+ Products</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
     <!-- ==================== NOTIFICATIONS PANEL ==================== -->
     <div id="notifications-panel" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black/50" onclick="hideNotifications()"></div>
@@ -1421,8 +1476,15 @@
         // ==================== FUNCTIONS ====================
         function showScreen(screenId) {
             document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-            document.getElementById(screenId).classList.add('active');
-            window.scrollTo(0, 0);
+            const targetScreen = document.getElementById(screenId);
+            if (targetScreen) {
+                targetScreen.classList.add('active');
+                window.scrollTo(0, 0);
+            } else {
+                console.warn('Screen not found:', screenId);
+                showToast('Coming soon!', 'info');
+                return;
+            }
 
             if (screenId === 'search-screen') {
                 renderSearchResults();
